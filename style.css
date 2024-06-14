@@ -1,15 +1,12 @@
+/* ------------ General Styling --------------- */
+
 * {
   box-sizing: border-box;
-  border-color: rgb(0, 0, 0);
-  outline-style: solid;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
   margin: 0px;
-}
-
-html {
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1,
@@ -19,13 +16,31 @@ h4 {
   font-family: courier "Courier New", Courier, monospace;
 }
 
+/* -----------  Specific Styling --------------- */
+
+/* Add a padding to the header and main element within the body
+Use a padding value that looks good to you but use at least 16px */
 header,
 main {
   padding: 16px;
 }
 
-header {
+/* Style the overall header (the one in the body) of the document
+like this:
+- Align the text in the center using text-align: center
+- Use a background-color for the header
+- Use a padding within the header to create more room for the document title */
+
+.header {
   text-align: center;
   background-color: bisque;
-  margin: 0px, 50px, 0px, 0px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+/* keine Aufgabe, selber ausprobiert */
+.big-heading {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: 40px;
 }
