@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  border-color: rgb(0, 0, 0);
+  outline-style: solid;
+}
+
+body {
+  margin: 0px;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: courier "Courier New", Courier, monospace;
+}
+
+header,
+main {
+  padding: 16px;
+}
+
+header {
+  text-align: center;
+  background-color: bisque;
+  margin: 0px, 50px, 0px, 0px;
+}
