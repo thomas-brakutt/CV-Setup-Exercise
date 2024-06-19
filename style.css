@@ -45,7 +45,8 @@ like this:
   font-size: 40px;
 }
 
-/* Aufgabe Css-Foundation 02 
+/* ------------  Aufgabe Css-Foundation 02  ---------------
+
    - Use the border property to draw a line over
      each article of the main content except for the first one */
 
@@ -97,4 +98,26 @@ footer {
   color: black;
   font-size: 20px;
   background-color: rgb(252, 252, 252);
+}
+/* ------------ Aufgabe Css-Foundation 03 ------------------
+
+  Change the selection style of the document */
+
+::selection {
+  background-color: rgba(225, 152, 6, 0.552);
+}
+
+/* - Use a different background color and / or color */
+
+main {
+  background-color: rgba(234, 120, 13, 0.222);
+  color: rgb(113, 28, 7);
+}
+
+/* - Use the ::after pseudo element of the profession
+     subheading to display a emoji best describing you or
+     your professional you */
+
+.p-heading::after {
+  content: " 💻";
 }
