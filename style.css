@@ -1,9 +1,11 @@
 /* ------------ General Styling --------------- */
 
-* {
+html {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-}
+} /* -> Css-Aufagbe 04:
+The general font family should be inherited
+from the <html> element  */
 
 body {
   margin: 0px;
@@ -110,7 +112,7 @@ footer {
 /* - Use a different background color and / or color */
 
 main {
-  background-color: rgba(234, 120, 13, 0.222);
+  background-color: rgba(241, 209, 179, 0.222);
   color: rgb(113, 28, 7);
 }
 
