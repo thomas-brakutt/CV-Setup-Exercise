@@ -38,6 +38,7 @@ like this:
   background-color: bisque;
   padding-top: 20px;
   padding-bottom: 50px;
+  position: relative;
 }
 
 /* keine Aufgabe, selber ausprobiert */
@@ -150,4 +151,32 @@ main {
 
 .small-subheader {
   display: inline-block;
+}
+
+/* ------------ Aufgabe Css-Foundation 06 ------------------
+
+ - Display the headings of the main articles slightly more offset
+   to the left */
+
+h2 {
+  position: relative;
+  margin-left: -15px;
+}
+
+/* - Add a "Hire Me" badge inside the header that is placed
+absolutely in the top right corner of the header */
+
+.hire-me {
+  color: red;
+  border: 2px solid red;
+  padding: 5px;
+  padding-left: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.hire-me::after {
+  content: "😊";
 }
