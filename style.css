@@ -3,12 +3,16 @@
 html {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-} /* -> Css-Aufagbe 04:
+  font-size: 18px;
+  background-color: rgba(235, 222, 210, 0.222);
+}
+
+/* -> Css-Aufagbe 04:
 The general font family should be inherited
 from the <html> element  */
 
 body {
-  margin: 0px;
+  margin: 0;
 }
 
 h1,
@@ -24,7 +28,7 @@ h4 {
 Use a padding value that looks good to you but use at least 16px */
 header,
 main {
-  padding: 16px;
+  padding: 0.5rem;
 }
 
 /* Style the overall header (the one in the body) of the document
@@ -36,16 +40,9 @@ like this:
 .header {
   text-align: center;
   background-color: bisque;
-  padding-top: 20px;
-  padding-bottom: 50px;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   position: relative;
-}
-
-/* keine Aufgabe, selber ausprobiert */
-.big-heading {
-  padding-top: 15px;
-  padding-bottom: 20px;
-  font-size: 40px;
 }
 
 /* ------------  Aufgabe Css-Foundation 02  ---------------
@@ -57,8 +54,8 @@ article + article {
   border-top: 1px solid slategrey;
 }
 article {
-  padding-bottom: 10px;
-  margin: 10px;
+  padding-bottom: 0.75rem;
+  margin: 0.75rem;
 }
 footer {
   border-top: 1px solid slategrey;
@@ -67,23 +64,23 @@ footer {
 
 .Text,
 article {
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 .fähigkeiten > ul {
-  margin-top: -10px;
+  margin-top: -1rem;
 }
 
 footer {
-  margin-left: 35px;
+  margin-left: 2rem;
 }
 .address > li {
-  margin-left: -20px;
-  padding-bottom: 5px;
+  margin-left: -0.77rem;
+  padding-bottom: 0.25rem;
 }
 /* Add styling to the navigation links
    - Add spacing between the navigation links */
 .navigation > a + a {
-  margin-left: 15px;
+  margin-left: 0.5rem;
 }
 /* Add a general color for the navigation links */
 .navigation > a {
@@ -93,26 +90,26 @@ footer {
 (i.e. different color or background color) */
 .navigation > a:hover {
   background-color: rgb(249, 205, 151);
-  padding: 3px;
+  padding: 0.25rem;
   border: 2px solid black;
   border-radius: 5px;
 }
 .navigation > a:active {
   color: black;
-  font-size: 20px;
+  font-size: 1.25rem;
   background-color: rgb(252, 252, 252);
 }
 
 .address > li > a:hover {
   background-color: rgb(249, 205, 151);
-  padding: 3px;
+  padding: 0.25rem;
   border: 2px solid black;
   border-radius: 5px;
 }
 
 .address > li > a:active {
   color: black;
-  font-size: 20px;
+  font-size: 1.25rem;
   background-color: rgb(252, 252, 252);
 }
 
@@ -160,7 +157,7 @@ main {
 
 h2 {
   position: relative;
-  margin-left: -15px;
+  margin-left: -1rem;
 }
 
 /* - Add a "Hire Me" badge inside the header that is placed
@@ -169,8 +166,9 @@ absolutely in the top right corner of the header */
 .hire-me {
   color: red;
   border: 2px solid red;
-  padding: 5px;
-  padding-left: 10px;
+  border-radius: 5px;
+  padding: 0.25rem;
+  padding-left: 0.75rem;
   position: absolute;
   top: 0;
   right: 0;
@@ -179,4 +177,36 @@ absolutely in the top right corner of the header */
 
 .hire-me::after {
   content: "😊";
+}
+
+/* ------------ Aufgabe Css-Foundation 07 ------------------
+
+ - Enclose the title (<h1>) and profession (<p>) of the header
+   in a generic html element -> in html in ein div-Element eingebaut
+
+ - Give that enclosing element a rem based font size (it should be big) */
+
+.div-header {
+  font-size: 4rem;
+}
+
+/* Use relative sizing using the em unit for the title and profession
+   - The title (<h1>) should have the same size as the parent element
+   - The profession (<p>) should be 25% of the size */
+
+.big-heading {
+  font-size: 1em;
+  margin-bottom: -0.1em;
+}
+.p-heading {
+  font-size: 0.25em;
+  padding-bottom: 1.5em;
+}
+
+/* Use the ch unit to limit the max-width of the main content
+   Experiment with the max-width to get a good reading experience */
+
+.main-body {
+  max-width: 65ch;
+  margin: auto;
 }
