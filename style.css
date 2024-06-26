@@ -179,9 +179,9 @@ absolutely in the top right corner of the header */
   content: "😊";
 }
 
-/* ------------ Aufgabe Css-Foundation 07 ------------------
+/* ------------ Aufgabe Css-Foundation 07 ------------------*/
 
- - Enclose the title (<h1>) and profession (<p>) of the header
+/*- Enclose the title (<h1>) and profession (<p>) of the header
    in a generic html element -> in html in ein div-Element eingebaut
 
  - Give that enclosing element a rem based font size (it should be big) */
@@ -210,3 +210,53 @@ absolutely in the top right corner of the header */
   max-width: 65ch;
   margin: auto;
 }
+
+/* ------------ Aufgabe Css-Foundation 08 ------------------*/
+
+/* Introduce breakpoints for medium and large screens
+  - You can use 786px as medium breakpoint and 992px as large
+    breakpoint (both values are based on bootstrap)
+  - You can as well make up your own breakpoints 
+  - Increase the overall font size at both breakpoints */
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-widht: 992px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+/* Use fixed position for the "Hire Me" badge beginning with
+   the large breakpoint  */
+
+@media screen and (min-width: 992px) {
+  .hire-me {
+    position: fixed;
+  }
+}
+
+/* Hide the navigation and "Hire Me" badge for printers */
+
+@media print {
+  .hire-me {
+    display: none;
+  }
+  .navigation {
+    display: none;
+  }
+}
+
+/* Increase the spacing between the main articles beginning
+   with the medium break point */
+
+@media screen and (min-width: 768px) {
+  .main > article + article {
+    margin-top: 5rem;
+  }
+}
+/* ----------------  Ende Css-Foundation -------------------*/
