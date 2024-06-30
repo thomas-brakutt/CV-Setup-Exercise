@@ -260,3 +260,52 @@ absolutely in the top right corner of the header */
   }
 }
 /* ----------------  Ende Css-Foundation -------------------*/
+
+/* -------------------- CSS - ADVANCE------------------ */
+/* Aufgabe 01
+   - Flexbox
+   - Navigation
+    - Use a flexbox for the navigation in the site header
+    - Display all navigation links vertically by default
+    - Starting with the medium breakpoint (768px) display the
+      navigations links horizontally  */
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigation > a {
+  padding-bottom: 0.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Experiences
+   - Use a flexbox for the headings of each job / experience
+   - Display the job title and the time span vertically by default
+   - Beginning with the medium breakpoint display the job title
+     on the left side and the time span on the right side */
+
+.erfahrungen-header {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .erfahrungen-header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+.small-header {
+  margin: 0.4rem;
+}
