@@ -1,3 +1,8 @@
+:root {
+  --main-color: rgb(113, 28, 7);
+  --link-color: rgb(234, 81, 15);
+}
+
 /* ------------ General Styling --------------- */
 
 html {
@@ -39,10 +44,12 @@ like this:
 
 .header {
   text-align: center;
-  background-color: bisque;
   padding-top: 1rem;
   padding-bottom: 2rem;
   position: relative;
+  max-width: 80ch;
+  margin: auto;
+  background-image: linear-gradient(315deg, rgb(108, 153, 226), lightblue);
 }
 
 /* ------------  Aufgabe Css-Foundation 02  ---------------
@@ -51,14 +58,14 @@ like this:
      each article of the main content except for the first one */
 
 article + article {
-  border-top: 1px solid slategrey;
+  border-top: 1px solid rgb(108, 153, 226);
 }
 article {
   padding-bottom: 0.75rem;
   margin: 0.75rem;
 }
 footer {
-  border-top: 1px solid slategrey;
+  border-top: 1px solid rgb(108, 153, 226);
 }
 /*  - Add spacing between the different areas of your main content */
 
@@ -84,7 +91,7 @@ footer {
 }
 /* Add a general color for the navigation links */
 .navigation > a {
-  color: rgb(234, 81, 15);
+  color: var(--link-color);
 }
 /* Add specific styling for the :hover and :active state
 (i.e. different color or background color) */
@@ -114,7 +121,7 @@ footer {
 }
 
 .address > li > a {
-  color: rgb(234, 81, 15);
+  color: var(--link-color);
 }
 
 /* ------------ Aufgabe Css-Foundation 03 ------------------
@@ -129,7 +136,7 @@ footer {
 
 main {
   background-color: rgba(241, 209, 179, 0.222);
-  color: rgb(113, 28, 7);
+  color: var(--main-color);
 }
 
 /* - Use the ::after pseudo element of the profession
@@ -171,7 +178,7 @@ absolutely in the top right corner of the header */
   padding-left: 0.75rem;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 310px;
   margin: 10px;
 }
 
@@ -207,7 +214,7 @@ absolutely in the top right corner of the header */
    Experiment with the max-width to get a good reading experience */
 
 .main-body {
-  max-width: 65ch;
+  max-width: 80ch;
   margin: auto;
 }
 
@@ -308,4 +315,29 @@ absolutely in the top right corner of the header */
 }
 .small-header {
   margin: 0.4rem;
+}
+
+.footer {
+  color: black;
+  text-align: center;
+  max-width: 80ch;
+  height: 3rem;
+  background-image: linear-gradient(315deg, rgb(108, 153, 226), lightblue);
+}
+
+.footer > p > a {
+  color: var(--link-color);
+}
+
+.footer > p > a:hover {
+  background-color: rgb(249, 205, 151);
+  padding: 0.25rem;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.footer > p > a:active {
+  color: black;
+  font-size: 1.25rem;
+  background-color: rgb(252, 252, 252);
 }
