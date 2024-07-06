@@ -1,6 +1,7 @@
 :root {
   --main-color: rgb(113, 28, 7);
   --link-color: rgb(234, 81, 15);
+  --nav-background: rgb(249, 205, 151);
 }
 
 /* ------------ General Styling --------------- */
@@ -92,23 +93,34 @@ footer {
 /* Add a general color for the navigation links */
 .navigation > a {
   color: var(--link-color);
+  transition-property: background-color, color;
+  transition-duration: 0.4s, 0.3s;
+  transition-timing-function: linear;
 }
 /* Add specific styling for the :hover and :active state
 (i.e. different color or background color) */
 .navigation > a:hover {
-  background-color: rgb(249, 205, 151);
+  background-color: var(--nav-background);
   padding: 0.25rem;
   border: 2px solid black;
   border-radius: 5px;
 }
+
 .navigation > a:active {
   color: black;
-  font-size: 1.25rem;
-  background-color: rgb(252, 252, 252);
+  _font-size: 1.25rem;
+  background-color: var(--nav-background);
+}
+
+.navigation > a:focus {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 0.25rem;
+  background-color: var(--nav-background);
 }
 
 .address > li > a:hover {
-  background-color: rgb(249, 205, 151);
+  background-color: var(--nav-background);
   padding: 0.25rem;
   border: 2px solid black;
   border-radius: 5px;
@@ -116,8 +128,7 @@ footer {
 
 .address > li > a:active {
   color: black;
-  font-size: 1.25rem;
-  background-color: rgb(252, 252, 252);
+  background-color: var(--nav-background);
 }
 
 .address > li > a {
@@ -178,7 +189,7 @@ absolutely in the top right corner of the header */
   padding-left: 0.75rem;
   position: absolute;
   top: 0;
-  right: 310px;
+  right: 0px;
   margin: 10px;
 }
 
@@ -241,7 +252,9 @@ absolutely in the top right corner of the header */
 /* Use fixed position for the "Hire Me" badge beginning with
    the large breakpoint  */
 
-@media screen and (min-width: 992px) {
+/*  gefällt mir aber nicht, deswegen nur symbolisch - ohne Funktion */
+
+_@media screen and (min-width: 992px) {
   .hire-me {
     position: fixed;
   }
