@@ -252,13 +252,13 @@ absolutely in the top right corner of the header */
 /* Use fixed position for the "Hire Me" badge beginning with
    the large breakpoint  */
 
-/*  gefällt mir aber nicht, deswegen nur symbolisch - ohne Funktion */
+/*  gefällt mir aber nicht, deswegen nur symbolisch - ohne Funktion
 
-_@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .hire-me {
     position: fixed;
   }
-}
+}*/
 
 /* Hide the navigation and "Hire Me" badge for printers */
 
