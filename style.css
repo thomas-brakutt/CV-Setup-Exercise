@@ -49,6 +49,7 @@ like this:
   padding-bottom: 2rem;
   position: relative;
   max-width: 80ch;
+  height: auto;
   margin: auto;
   background-image: linear-gradient(315deg, rgb(108, 153, 226), lightblue);
 }
@@ -191,10 +192,18 @@ absolutely in the top right corner of the header */
   top: 0;
   right: 0px;
   margin: 10px;
+  transition: 0.8s;
+  transform-origin: top right;
 }
 
 .hire-me::after {
   content: "😊";
+}
+.header:hover .hire-me {
+  transform: scale(1.3);
+}
+.header:focus-within .hire-me {
+  transform: scale(1.3);
 }
 
 /* ------------ Aufgabe Css-Foundation 07 ------------------*/
