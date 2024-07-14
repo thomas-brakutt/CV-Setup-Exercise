@@ -13,10 +13,6 @@ html {
   background-color: rgba(235, 222, 210, 0.222);
 }
 
-/* -> Css-Aufagbe 04:
-The general font family should be inherited
-from the <html> element  */
-
 body {
   margin: 0;
 }
@@ -28,20 +24,10 @@ h4 {
   font-family: courier "Courier New", Courier, monospace;
 }
 
-/* -----------  Specific Styling --------------- */
-
-/* Add a padding to the header and main element within the body
-Use a padding value that looks good to you but use at least 16px */
 header,
 main {
   padding: 0.5rem;
 }
-
-/* Style the overall header (the one in the body) of the document
-like this:
-- Align the text in the center using text-align: center
-- Use a background-color for the header
-- Use a padding within the header to create more room for the document title */
 
 .header {
   text-align: center;
@@ -54,11 +40,6 @@ like this:
   background-image: linear-gradient(315deg, rgb(108, 153, 226), lightblue);
 }
 
-/* ------------  Aufgabe Css-Foundation 02  ---------------
-
-   - Use the border property to draw a line over
-     each article of the main content except for the first one */
-
 article + article {
   border-top: 1px solid rgb(108, 153, 226);
 }
@@ -69,7 +50,6 @@ article {
 footer {
   border-top: 1px solid rgb(108, 153, 226);
 }
-/*  - Add spacing between the different areas of your main content */
 
 .Text,
 article {
@@ -86,20 +66,18 @@ footer {
   margin-left: -0.77rem;
   padding-bottom: 0.25rem;
 }
-/* Add styling to the navigation links
-   - Add spacing between the navigation links */
+
 .navigation > a + a {
   margin-left: 0.5rem;
 }
-/* Add a general color for the navigation links */
+
 .navigation > a {
   color: var(--link-color);
   transition-property: background-color, color;
   transition-duration: 0.4s, 0.3s;
   transition-timing-function: linear;
 }
-/* Add specific styling for the :hover and :active state
-(i.e. different color or background color) */
+
 .navigation > a:hover {
   background-color: var(--nav-background);
   padding: 0.25rem;
@@ -136,30 +114,18 @@ footer {
   color: var(--link-color);
 }
 
-/* ------------ Aufgabe Css-Foundation 03 ------------------
-
-  Change the selection style of the document */
-
 ::selection {
   background-color: rgba(225, 152, 6, 0.552);
 }
-
-/* - Use a different background color and / or color */
 
 main {
   background-color: rgba(241, 209, 179, 0.222);
   color: var(--main-color);
 }
 
-/* - Use the ::after pseudo element of the profession
-     subheading to display a emoji best describing you or
-     your professional you */
-
 .p-heading::after {
   content: " 💻";
 }
-
-/* ------------ Aufgabe Css-Foundation 05 ------------------ */
 
 .small-header {
   display: inline-block;
@@ -169,18 +135,10 @@ main {
   display: inline-block;
 }
 
-/* ------------ Aufgabe Css-Foundation 06 ------------------
-
- - Display the headings of the main articles slightly more offset
-   to the left */
-
 h2 {
   position: relative;
   margin-left: -1rem;
 }
-
-/* - Add a "Hire Me" badge inside the header that is placed
-absolutely in the top right corner of the header */
 
 .hire-me {
   color: red;
@@ -206,20 +164,9 @@ absolutely in the top right corner of the header */
   transform: scale(1.3);
 }
 
-/* ------------ Aufgabe Css-Foundation 07 ------------------*/
-
-/*- Enclose the title (<h1>) and profession (<p>) of the header
-   in a generic html element -> in html in ein div-Element eingebaut
-
- - Give that enclosing element a rem based font size (it should be big) */
-
 .div-header {
   font-size: 4rem;
 }
-
-/* Use relative sizing using the em unit for the title and profession
-   - The title (<h1>) should have the same size as the parent element
-   - The profession (<p>) should be 25% of the size */
 
 .big-heading {
   font-size: 1em;
@@ -230,21 +177,10 @@ absolutely in the top right corner of the header */
   padding-bottom: 1.5em;
 }
 
-/* Use the ch unit to limit the max-width of the main content
-   Experiment with the max-width to get a good reading experience */
-
 .main-body {
   max-width: 80ch;
   margin: auto;
 }
-
-/* ------------ Aufgabe Css-Foundation 08 ------------------*/
-
-/* Introduce breakpoints for medium and large screens
-  - You can use 786px as medium breakpoint and 992px as large
-    breakpoint (both values are based on bootstrap)
-  - You can as well make up your own breakpoints 
-  - Increase the overall font size at both breakpoints */
 
 @media screen and (min-width: 768px) {
   html {
@@ -258,18 +194,13 @@ absolutely in the top right corner of the header */
   }
 }
 
-/* Use fixed position for the "Hire Me" badge beginning with
-   the large breakpoint  */
-
 /*  gefällt mir aber nicht, deswegen nur symbolisch - ohne Funktion
-
-@media screen and (min-width: 992px) {
-  .hire-me {
-    position: fixed;
-  }
-}*/
-
-/* Hide the navigation and "Hire Me" badge for printers */
+  
+  @media screen and (min-width: 992px) {
+    .hire-me {
+      position: fixed;
+    }
+  }*/
 
 @media print {
   .hire-me {
@@ -280,24 +211,11 @@ absolutely in the top right corner of the header */
   }
 }
 
-/* Increase the spacing between the main articles beginning
-   with the medium break point */
-
 @media screen and (min-width: 768px) {
   .main > article + article {
     margin-top: 5rem;
   }
 }
-/* ----------------  Ende Css-Foundation -------------------*/
-
-/* -------------------- CSS - ADVANCE------------------ */
-/* Aufgabe 01
-   - Flexbox
-   - Navigation
-    - Use a flexbox for the navigation in the site header
-    - Display all navigation links vertically by default
-    - Starting with the medium breakpoint (768px) display the
-      navigations links horizontally  */
 
 .navigation {
   display: flex;
@@ -315,12 +233,6 @@ absolutely in the top right corner of the header */
     justify-content: center;
   }
 }
-
-/* Experiences
-   - Use a flexbox for the headings of each job / experience
-   - Display the job title and the time span vertically by default
-   - Beginning with the medium breakpoint display the job title
-     on the left side and the time span on the right side */
 
 .erfahrungen-header {
   display: flex;
