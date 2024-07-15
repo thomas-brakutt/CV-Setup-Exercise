@@ -55,9 +55,6 @@ footer {
 article {
   margin-left: 1rem;
 }
-.fähigkeiten > ul {
-  margin-top: -1rem;
-}
 
 footer {
   margin-left: 2rem;
@@ -131,17 +128,22 @@ main {
   display: inline-block;
 }
 
-.small-subheader {
+_.small-subheader {
   display: inline-block;
 }
 
 h2 {
   position: relative;
-  margin-left: -1rem;
+  margin-top: 0;
 }
 
-.main-article > header {
+.faehigkeiten-header {
   grid-column: 1 / 3;
+  _margin-inline: auto;
+}
+
+.tabelle-h3 {
+  margin-inline: auto;
 }
 
 .hire-me {
@@ -238,12 +240,12 @@ h2 {
   }
 }
 
-.erfahrungen-header {
+_.erfahrungen-header {
   display: flex;
   flex-direction: column;
 }
 
-@media screen and (min-width: 768px) {
+_@media screen and (min-width: 768px) {
   .erfahrungen-header {
     display: flex;
     flex-direction: row;
@@ -251,7 +253,7 @@ h2 {
     justify-content: space-between;
   }
 }
-.small-header {
+_.small-header {
   margin: 0.4rem;
 }
 
@@ -284,6 +286,5 @@ h2 {
   .main-article {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
   }
 }
