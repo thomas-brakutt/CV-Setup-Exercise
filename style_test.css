@@ -140,6 +140,10 @@ h2 {
   margin-left: -1rem;
 }
 
+.main-article > header {
+  grid-column: 1 / 3;
+}
+
 .hire-me {
   color: red;
   border: 2px solid red;
